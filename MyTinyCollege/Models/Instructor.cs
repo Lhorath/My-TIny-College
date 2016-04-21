@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MyTinyCollege.Models
 {
-    class Instructor:Person
+    public class Instructor:Person
     {
         public DateTime HireDate { get; set; }
+        public virtual ICollection<Course> Courses { get; set; } // 1 Instructor to Many Courses.
+        public virtual OfficeAssignment OfficeAssignment { get; set; }
+
     }
 }
